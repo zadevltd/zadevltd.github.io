@@ -16,11 +16,12 @@ function formatHTML(html) {
     .join('\n');
 }
 
-const outDir = path.join(__dirname, 'out');
+// Format files in the project root (where output is copied)
+const rootDir = path.join(__dirname, '..');
 const files = ['index.html', '404.html'];
 
 files.forEach(file => {
-  const filePath = path.join(outDir, file);
+  const filePath = path.join(rootDir, file);
   if (fs.existsSync(filePath)) {
     const content = fs.readFileSync(filePath, 'utf8');
     const formatted = formatHTML(content);
@@ -30,5 +31,6 @@ files.forEach(file => {
 });
 
 console.log('HTML formatting complete!');
+
 
 

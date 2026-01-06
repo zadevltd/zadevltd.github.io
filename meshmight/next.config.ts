@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   },
   // Ensure proper static export
   trailingSlash: false,
+  // Output will be copied to project root via build script
 };
 
 export default nextConfig;

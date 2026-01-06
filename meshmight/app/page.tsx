@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import { ShieldCheck, Layers, Hammer, MapPin } from 'lucide-react';
+import ContactForm from './components/ContactForm';
+
 
 export default function Home() {
   return (
@@ -155,9 +157,12 @@ export default function Home() {
             </p>
             
             {/* Optional Button */}
-            <button className="rounded-md transition-all duration-200 bg-white px-6 py-3 text-md font-semibold text-black shadow-sm hover:bg-[#f9c22d] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+            <a 
+              href="#contact"
+              className="inline-block rounded-md transition-all duration-200 bg-white px-6 py-3 text-md font-semibold text-black shadow-sm hover:bg-[#f9c22d] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >
               Contact Us
-            </button>
+            </a>
           </div>
 
         </div>
@@ -233,11 +238,11 @@ export default function Home() {
       </section>
 
       {/* 4. CONTACT SECTION (id="contact") */}
-      <section id="contact" className="min-h-72 flex flex-col items-center justify-center bg-contact-bg text-contact-text px-4">
-        <h2 className="text-4xl font-bold text-contact-text mb-6">Ready to start your project?</h2>
-        <button className="rounded-xl transition-all duration-200 bg-white px-6 py-3 text-lg font-semibold text-black shadow-sm hover:bg-[#f9c22d] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
-        Contact Us
-        </button>
+      <section id="contact" className="min-h-screen flex flex-col items-center justify-center bg-contact-bg text-contact-text px-4 py-12">
+        <div className="container mx-auto max-w-2xl">
+          <h2 className="text-4xl font-bold text-contact-text mb-6 text-center">Ready to start your project?</h2>
+          <ContactForm />
+        </div>
       </section>
 
     </main>

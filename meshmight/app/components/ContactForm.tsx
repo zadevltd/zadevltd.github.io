@@ -19,10 +19,10 @@ export default function Contact() {
     mode: "onTouched",
   });
   const [isSuccess, setIsSuccess] = useState(false);
-  const [message, setMessage] = useState(false);
+  const [message, setMessage] = useState<string | false>(false);
 
   // Please update the Access Key in the .env
-  const apiKey = "f3ded4cd-3251-47e9-b34a-2dcb07ef27f2" || "YOUR_ACCESS_KEY_HERE";
+  const apiKey = process.env.NEXT_PUBLIC_ACCESS_KEY || "f3ded4cd-3251-47e9-b34a-2dcb07ef27f2";
 
   const { submit: onSubmit } = useWeb3Forms({
     access_key: apiKey,
@@ -68,7 +68,7 @@ export default function Contact() {
           />
           {errors.name && (
             <div className="mt-1 text-red-600">
-              <small>{errors.name.message}</small>
+              <small>{typeof errors.name.message === 'string' ? errors.name.message : 'Full name is required'}</small>
             </div>
           )}
         </div>
@@ -81,7 +81,6 @@ export default function Contact() {
             id="email_address"
             type="email"
             placeholder="Email Address"
-            name="email"
             autoComplete="false"
             className={`w-full px-4 py-3 border-2 placeholder:text-gray-800 dark:text-white rounded-md outline-none dark:placeholder:text-gray-200 dark:bg-gray-900   focus:ring-4  ${
               errors.email
@@ -98,14 +97,13 @@ export default function Contact() {
           />
           {errors.email && (
             <div className="mt-1 text-red-600">
-              <small>{errors.email.message}</small>
+              <small>{typeof errors.email.message === 'string' ? errors.email.message : 'Please enter a valid email'}</small>
             </div>
           )}
         </div>
 
         <div className="mb-3">
           <textarea
-            name="message"
             placeholder="Your Message"
             className={`w-full px-4 py-3 border-2 placeholder:text-gray-800 dark:text-white dark:placeholder:text-gray-200 dark:bg-gray-900   rounded-md outline-none  h-36 focus:ring-4  ${
               errors.message
@@ -118,8 +116,7 @@ export default function Contact() {
           />
           {errors.message && (
             <div className="mt-1 text-red-600">
-              {" "}
-              <small>{errors.message.message}</small>
+              <small>{typeof errors.message.message === 'string' ? errors.message.message : 'Enter your Message'}</small>
             </div>
           )}
         </div>

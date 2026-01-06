@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:format": "next build && node format-html.js",
     "start": "next start",
     "lint": "eslint"
   },

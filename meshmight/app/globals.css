@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f9c22d;
+  --foreground: #171717;
+  
+  /* Section-specific color schemes */
+  --hero-bg: #f9c22d;
+  --hero-text: #171717;
+  
+  --about-bg: #000000;
+  --about-text: #ffffff;
+  --about-accent: #f9c22d;
+  
+  --products-bg: #f9c22d;
+  --products-text: #171717;
+  
+  --contact-bg: #000000;
+  --contact-text: #ffffff;
+  --contact-accent: #f9c22d;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  /* Section color schemes */
+  --color-hero-bg: var(--hero-bg);
+  --color-hero-text: var(--hero-text);
+  --color-about-bg: var(--about-bg);
+  --color-about-text: var(--about-text);
+  --color-about-accent: var(--about-accent);
+  --color-products-bg: var(--products-bg);
+  --color-products-text: var(--products-text);
+  --color-contact-bg: var(--contact-bg);
+  --color-contact-text: var(--contact-text);
+  --color-contact-accent: var(--contact-accent);
+  
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #f9c22d;
+    --foreground: #ffffff;
+    --background2: #000000;
+  }
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main {
+  width: 100%;
+  flex: 1 1 100%;
+}

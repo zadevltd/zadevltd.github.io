@@ -3,25 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meshmight</title>
+    <title>Mesh Might | Master the Finish</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-        p { font-size: 1.2rem; color: #666; }
+        body { font-family: 'Roboto', sans-serif; }
+        .mesh-yellow { color: #FFD700; } /* Adjust hex to match your exact yellow */
+        .bg-mesh-yellow { background-color: #FFD700; }
+        .clip-slant { clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); } /* Adds a cool industrial slant */
     </style>
 </head>
-<body>
-    <h1>Meshmight</h1>
-    <p>This website is currently under construction.</p>
+<body class="bg-white text-gray-900">
+
+    <nav class="bg-black text-white p-4 sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <img src="assets/images/logo.png" alt="Mesh Might Logo" class="h-10">
+            <div class="space-x-6 text-sm font-bold uppercase tracking-wider hidden md:block">
+                <a href="#products" class="hover:text-yellow-400">Products</a>
+                <a href="#about" class="hover:text-yellow-400">Our Story</a>
+                <a href="#contact" class="bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400 transition">Shop Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative h-[600px] flex items-center justify-center bg-gray-900 text-white overflow-hidden clip-slant">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/images/hero-banner.jpg" alt="Worker Polishing" class="w-full h-full object-cover opacity-60">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4">
+            <img src="assets/images/logo.png" alt="Mesh Might" class="h-24 md:h-32 mx-auto mb-6 drop-shadow-lg">
+            <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4">Master The Finish</h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">High-performance non-woven scuff pads for automotive, wood, and metal.</p>
+            <a href="#products" class="inline-block bg-yellow-500 text-black text-xl font-bold py-3 px-8 rounded shadow-lg hover:scale-105 transform transition">
+                SEE THE COLLECTION
+            </a>
+        </div>
+    </header>
+
+    <section id="about" class="py-20 px-4 text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-black uppercase mb-6">Built for the Grind</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">
+            In the workshop, the finish isn’t just the last step—it’s the only step that matters. 
+            <strong>Mesh Might</strong> was born from a need for abrasive pads that don't quit. 
+            Whether you are prepping an auto body for paint or smoothing out custom woodwork, 
+            our mesh technology delivers a consistent scratch pattern every time.
+        </p>
+    </section>
+
+    <section id="products" class="bg-gray-100 py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-black uppercase">Choose Your Might</h2>
+                <p class="text-gray-600 mt-2">Two distinct thicknesses engineered for specific applications.</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow-xl max-w-5xl mx-auto">
+                <img src="assets/images/flex-product.jpg" alt="Flex vs Original Series Comparison" class="w-full h-auto rounded">
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mt-12 max-w-5xl mx-auto">
+                <div class="bg-white p-8 border-l-8 border-red-700 shadow-sm">
+                    <h3 class="text-2xl font-bold uppercase mb-2">The Flex Series</h3>
+                    <span class="bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded">0.25" THIN PROFILE</span>
+                    <p class="mt-4 text-gray-600">Specially designed for contours, tight corners, and complex shapes. Perfect for automotive door jams and intricate furniture spindles.</p>
+                </div>
+                <div class="bg-white p-8 border-l-8 border-yellow-500 shadow-sm">
+                    <h3 class="text-2xl font-bold uppercase mb-2">The Mesh Might Original</h3>
+                    <span class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded">0.39" DURABLE PROFILE</span>
+                    <p class="mt-4 text-gray-600">Your go-to scuff pads. Thick, resilient, and ready for flat surfaces and heavy-duty general purpose scuffing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-neutral-900 text-white py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-black uppercase text-center mb-12 text-yellow-500">Grit Selection Guide</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div class="p-6 border border-gray-700 rounded hover:border-yellow-500 transition">
+                    <h3 class="text-xl font-bold mb-4">Prep & Scuff</h3>
+                    <div class="space-y-2">
+                        <div class="bg-yellow-600 py-1 px-3 rounded font-bold">Gold (P150)</div>
+                        <div class="bg-green-700 py-1 px-3 rounded font-bold">Green (P240)</div>
+                    </div>
+                    <p class="mt-4 text-gray-400 text-sm">Best for rust removal, heavy stripping, and initial prep work.</p>
+                </div>
+                <div class="p-6 border border-gray-700 rounded hover:border-red-500 transition">
+                    <h3 class="text-xl font-bold mb-4">Refine</h3>
+                    <div class="space-y-2">
+                        <div class="bg-red-900 py-1 px-3 rounded font-bold">Maroon (P320)</div>
+                        <div class="bg-red-600 py-1 px-3 rounded font-bold">Red (P400)</div>
+                    </div>
+                    <p class="mt-4 text-gray-400 text-sm">Ideal for paint prep, blending, and smoothing wood grain.</p>
+                </div>
+                <div class="p-6 border border-gray-700 rounded hover:border-purple-500 transition">
+                    <h3 class="text-xl font-bold mb-4">Finish & Polish</h3>
+                    <div class="space-y-2">
+                        <div class="bg-purple-800 py-1 px-3 rounded font-bold">Purple (P600)</div>
+                        <div class="bg-gray-500 py-1 px-3 rounded font-bold text-black">Gray (P800)</div>
+                    </div>
+                    <p class="mt-4 text-gray-400 text-sm">For final clear coat scuffing, wet sanding, and polishing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-8 text-center border-t border-gray-800">
+        <p class="text-gray-500 mb-4">&copy; 2025 Mesh Might. All Rights Reserved.</p>
+        <div class="flex justify-center space-x-4 opacity-50">
+           <span>Instagram</span> | <span>Facebook</span> | <span>Contact Support</span>
+        </div>
+    </footer>
+
 </body>
 </html>

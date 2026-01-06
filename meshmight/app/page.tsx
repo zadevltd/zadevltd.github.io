@@ -17,6 +17,8 @@ export default function Home() {
             fill
             className="object-cover opacity-40"
             priority
+            fetchPriority="high"
+            sizes="100vw"
           />
         </div>
         {/* Content */}
@@ -26,12 +28,15 @@ export default function Home() {
             alt="MeshMight Logo" 
             width={500} // Made slightly smaller for better fit
             height={100} 
-            className="mb-8"
+            className="mb-8 px-8"
+            priority
+            fetchPriority="high"
           />
           <p className="text-3xl  max-w-lg font-bold text-center">
             Consistent Cut. Every Time.
           </p>
         </div>
+
       </section>
 
       {/* 2. ABOUT SECTION (id="about") */}
@@ -68,7 +73,9 @@ export default function Home() {
                 alt="Brand" 
                 width={400} 
                 height={400} 
-                className="rounded-lg overflow-hidden object-cover" 
+                className="rounded-lg overflow-hidden object-cover"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>
@@ -157,12 +164,32 @@ export default function Home() {
             </p>
             
             {/* Optional Button */}
+            <div className="flex justify-center items-center gap-10 relative z-50">
+              <a 
+                href="#contact"
+                className="inline-block rounded-md transition-all duration-200 bg-white px-6 py-3 text-md font-semibold text-black shadow-sm hover:bg-[#f9c22d] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              >
+                Contact Us
+              </a>
+
             <a 
-              href="#contact"
-              className="inline-block rounded-md transition-all duration-200 bg-white px-6 py-3 text-md font-semibold text-black shadow-sm hover:bg-[#f9c22d] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              href="https://www.amazon.com/stores/MeshMight20longerlasting/page/A585DAD1-A98D-42B9-9ACF-B907D22A5FEB" 
+              className="bg-white hover:bg-[#f9c22d] text-black px-2 py-2 border-black rounded-full inline-block transition-colors"
+              aria-label="Go to about section"
             >
-              Contact Us
+              <Image 
+                src="/amazon-logo-svgrepo-com.svg" 
+                alt="Amazon Logo" 
+                width={30} 
+                height={30} 
+                className="object-contain block" 
+                priority
+                style={{ display: 'block', opacity: 1 }}
+              />
             </a>
+            </div>
+
+
           </div>
 
         </div>
@@ -186,7 +213,9 @@ export default function Home() {
                   alt="Products" 
                   width={400} 
                   height={400} 
-                  className="rounded-4xl overflow-hidden object-cover" 
+                  className="rounded-4xl overflow-hidden object-cover"
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <a 
                   href="https://www.amazon.com/MeshMight-Flex-6-Pack-Scuff-Pads/dp/B0FP8MB1WF" 
@@ -212,7 +241,9 @@ export default function Home() {
                   alt="Products" 
                   width={400} 
                   height={400} 
-                  className="rounded-4xl overflow-hidden object-cover" 
+                  className="rounded-4xl overflow-hidden object-cover"
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <a 
                   href="https://www.amazon.com/MeshMight-Non-Woven-Aluminum-Abrasive-Scouring/dp/B0DYHWKZQ2" 
@@ -238,7 +269,7 @@ export default function Home() {
       </section>
 
       {/* 4. CONTACT SECTION (id="contact") */}
-      <section id="contact" className="min-h-screen flex flex-col items-center justify-center bg-contact-bg text-contact-text px-4 py-12">
+      <section id="contact" className="min-h-screen flex flex-col items-center justify-center bg-contact-bg text-contact-text px-6 py-12">
         <div className="container mx-auto max-w-2xl">
           <h2 className="text-4xl font-bold text-contact-text mb-6 text-center">Ready to start your project?</h2>
           <ContactForm />

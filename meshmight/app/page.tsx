@@ -13,7 +13,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <Image 
             src="/DSC09403.gif" 
-            alt="Background" 
+            alt="MeshMight abrasive pad demonstration showing consistent cutting performance" 
             fill
             className="object-cover opacity-40"
             priority
@@ -32,9 +32,9 @@ export default function Home() {
             priority
             fetchPriority="high"
           />
-          <p className="text-3xl  max-w-lg font-bold text-center">
+          <h1 className="text-3xl  max-w-lg font-bold text-center">
             Consistent Cut. Every Time.
-          </p>
+          </h1>
         </div>
 
       </section>
@@ -70,7 +70,7 @@ export default function Home() {
             <div className="w-full md:w-1/2 flex justify-center">
               <Image 
                 src="/DSC09379.gif" 
-                alt="Brand" 
+                alt="MeshMight brand story - premium abrasives with Canadian quality control" 
                 width={400} 
                 height={400} 
                 className="rounded-lg overflow-hidden object-cover"
@@ -210,7 +210,7 @@ export default function Home() {
               <div className="w-full md:w-1/2 flex flex-col justify-center md:items-center">
                 <Image 
                   src="/flex.gif" 
-                  alt="Products" 
+                  alt="MeshMight Flex scuff pads - flexible abrasive pads with superior conformability for woodworking and automotive finishing" 
                   width={400} 
                   height={400} 
                   className="rounded-4xl overflow-hidden object-cover"
@@ -238,7 +238,7 @@ export default function Home() {
               <div className="w-full md:w-1/2 flex flex-col justify-center md:items-center">
                 <Image 
                   src="/regular.gif" 
-                  alt="Products" 
+                  alt="MeshMight Regular non-woven abrasive pads with silicon carbide for professional woodworking automotive applications" 
                   width={400} 
                   height={400} 
                   className="rounded-4xl overflow-hidden object-cover"

@@ -1,0 +1,12 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.meshmight.ca/sitemap.xml
+
+# Disallow crawling of Next.js internal files
+Disallow: /_next/
+Disallow: /_not-found/
+Disallow: /__next/
+

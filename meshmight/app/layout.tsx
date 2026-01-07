@@ -105,7 +105,7 @@ export default function RootLayout({
   const productSchema1 = {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": "MeshMight Flex - 6-Pack Scuff Pads",
+    "name": "Flex 6-Pack Scuff Pads 6\"x9\" Non-Woven Abrasive Hand Pads with Silicon Carbide for Sanding, Paint Color Blend, Surface Prep Automotive, Auto Body, Woodworking (Assorted)",
     "description": "Flexible scuff pads engineered with superior conformability for North American workflows",
     "brand": {
       "@type": "Brand",
@@ -114,6 +114,7 @@ export default function RootLayout({
     "offers": {
       "@type": "Offer",
       "url": "https://www.amazon.com/MeshMight-Flex-6-Pack-Scuff-Pads/dp/B0FP8MB1WF",
+      "price": "9.99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "seller": {
@@ -127,7 +128,7 @@ export default function RootLayout({
   const productSchema2 = {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": "MeshMight Regular - Non-Woven Abrasive Pads",
+    "name": "12-Pack 6x9 Non-Woven Scuff Pads Multi Pack- Aluminum Oxide Abrasive for Scouring, Sanding, Paint Primer Prep - Automotive, Auto Body, Woodworking, Surface Preparation (Multi)",
     "description": "Non-woven aluminum oxide and silicon carbide abrasive pads for woodworking and finishing",
     "brand": {
       "@type": "Brand",
@@ -136,6 +137,7 @@ export default function RootLayout({
     "offers": {
       "@type": "Offer",
       "url": "https://www.amazon.com/MeshMight-Non-Woven-Aluminum-Abrasive-Scouring/dp/B0DYHWKZQ2",
+      "price": "20.99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "seller": {

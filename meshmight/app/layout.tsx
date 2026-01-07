@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.meshmight.ca'),
   title: {
-    default: "MeshMight - Consistent Cut. Every Time.",
+    default: "MeshMight - Premium Abrasive Scuff Pads | Consistent Cut. Every Time.",
     template: "%s | MeshMight"
   },
   description: "Premium abrasives with consistent quality and value. Canadian-designed scuff pads engineered for North American workflows. Silicon Carbide abrasives with superior conformability. Available on Amazon.",

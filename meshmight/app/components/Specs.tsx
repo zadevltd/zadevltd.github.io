@@ -136,7 +136,7 @@ export default function Specs() {
               <h3 className="text-2xl font-bold">Standard Series</h3>
               <p className="opacity-70 mt-1">Durable non-woven pads designed for larger surfaces and general-purpose scuffing. </p>
             </div>
-            <div className="flex items-center mt-4 md:mt-0 bg-white/5 px-4 py-2 rounded-full">
+            <div className="flex items-center mt-4 md:mt-0 bg-white/10 px-4 py-2 rounded-full">
               <Maximize className="w-4 h-4 mr-2 opacity-70" />
               <span className="text-sm font-mono">6" x 9" x 0.39"</span>
             </div>

@@ -39,7 +39,7 @@ export default function Story() {
 
         {/* ENGINEERING: The 3 Metrics */}
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-8">
+          <div className="text-center mb-4">
             <h3 className="text-3xl font-bold">Engineered by Process Engineers</h3>
             <p className="mt-4 opacity-80">We identified three non-negotiable metrics that commercial pads lacked:</p>
           </div>
@@ -78,6 +78,18 @@ export default function Story() {
               </p>
             </div>
           </div>
+        </div>
+
+        <div className="mt-12 text-center">
+          <p className="text-lg md:text-xl font-medium opacity-90">
+            <strong>Ready to spec the right pad for your process? Let’s talk.</strong>
+          </p>
+          <a
+            href="#contact"
+            className="mt-6 inline-flex items-center justify-center rounded-md bg-white px-6 py-3 text-base font-bold text-black transition-all duration-200 hover:bg-black hover:text-[#f9c22d] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF9900]"
+          >
+            Contact Us
+          </a>
         </div>
 
       </div>

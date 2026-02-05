@@ -79,7 +79,9 @@ export default function Navbar() {
           <div className="hidden md:flex gap-6">
             <Link href="/#home" className="hover:text-yellow-500 transition" onClick={(e) => handleNavClick(e, '/#home')}>Home</Link>
             <Link href="/#about" className="hover:text-yellow-500 transition" onClick={(e) => handleNavClick(e, '/#about')}>About</Link>
+            <Link href="/#story" className="hover:text-yellow-500 transition" onClick={(e) => handleNavClick(e, '/#story')}>Story</Link>
             <Link href="/#products" className="hover:text-yellow-500 transition" onClick={(e) => handleNavClick(e, '/#products')}>Products</Link>
+            <Link href="/#specs" className="hover:text-yellow-500 transition" onClick={(e) => handleNavClick(e, '/#specs')}>Specs</Link>
             <Link href="/#contact" className="hover:text-yellow-500 transition" onClick={(e) => handleNavClick(e, '/#contact')}>Contact</Link>
           </div>
         </div>
@@ -112,11 +114,25 @@ export default function Navbar() {
             About
           </Link>
           <Link 
+            href="/#story" 
+            className="px-4 py-2 rounded-full bg-gray-800 text-white text-sm font-medium hover:bg-yellow-500 hover:text-black transition-colors duration-200" 
+            onClick={(e) => handleNavClick(e, '/#story')}
+          >
+            Story
+          </Link>
+          <Link 
             href="/#products" 
             className="px-4 py-2 rounded-full bg-gray-800 text-white text-sm font-medium hover:bg-yellow-500 hover:text-black transition-colors duration-200" 
             onClick={(e) => handleNavClick(e, '/#products')}
           >
             Products
+          </Link>
+          <Link 
+            href="/#specs" 
+            className="px-4 py-2 rounded-full bg-gray-800 text-white text-sm font-medium hover:bg-yellow-500 hover:text-black transition-colors duration-200" 
+            onClick={(e) => handleNavClick(e, '/#specs')}
+          >
+            Specs
           </Link>
           <Link 
             href="/#contact" 

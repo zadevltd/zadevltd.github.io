@@ -1,6 +1,31 @@
 import Image from 'next/image';
 import { ShieldCheck, Layers, Hammer, MapPin } from 'lucide-react';
 import ContactForm from './components/ContactForm';
+import Specs from './components/Specs';
+import Story from './components/Story';
+
+const amazonlinks = [
+  {
+    name: "AmazonUSStore",
+    link: "https://www.amazon.com/stores/MeshMight20longerlasting/page/A585DAD1-A98D-42B9-9ACF-B907D22A5FEB"
+  },
+  {
+    name: "AmazonUSRegular",
+    link: "https://www.amazon.com/MeshMight-Non-Woven-Aluminum-Abrasive-Scouring/dp/B0DYHWKZQ2"
+  },
+  {
+    name: "AmazonCARegular",
+    link: "https://www.amazon.ca/12-Pack-Non-Woven-Aluminum-Woodworking-Finishing/dp/B0DYHWKZQ2"
+  },
+  {
+    name: "AmazonUSFlex",
+    link: "https://www.amazon.com/MeshMight-Flex-6-Pack-Scuff-Pads/dp/B0FP8MB1WF"
+  },
+  {
+    name: "AmazonCAFlex",
+    link: "https://www.amazon.ca/Meshmight-Flex-6-Pack-Scuff-Pads/dp/B0FP8PXBD2"
+  }
+]
 
 
 export default function Home() {
@@ -40,7 +65,7 @@ export default function Home() {
       </section>
 
       {/* 2. ABOUT SECTION (id="about") */}
-      <section id="about" className="min-h-screen flex flex-col justify-center items-center bg-about-bg  text-about-text px-4 py-12">
+      <section id="about" className="min-h-screen flex flex-col justify-center items-center bg-about-bg text-about-text px-4 py-12">
   
         {/* MAIN CONTAINER: Stacks the rows vertically (Column) */}
         <div className="container mx-auto flex flex-col gap-16 md:gap-24 max-w-6xl px-6">
@@ -173,7 +198,7 @@ export default function Home() {
               </a>
 
             <a 
-              href="https://www.amazon.com/stores/MeshMight20longerlasting/page/A585DAD1-A98D-42B9-9ACF-B907D22A5FEB" 
+              href={amazonlinks.find(l => l.name === 'AmazonUSStore')?.link ?? '#'}
               className="bg-white hover:bg-[#f9c22d] text-black px-2 py-2 border-black rounded-full inline-block transition-colors"
               aria-label="Go to about section"
             >
@@ -195,8 +220,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. PRODUCTS SECTION (id="products") */}
-      <section id="products" className="min-h-screen flex flex-col items-center justify-start py-20 bg-products-bg text-products-text px-4">
+      <Story />
+
+      {/* 4. PRODUCTS SECTION (id="products") */}
+      <section id="products" className="min-h-screen flex flex-col items-center justify-start py-20 bg-about-bg text-about-text px-4">
         <div className="container mx-auto flex flex-col gap-8 md:gap-8 px-4 justify-center items-center">
 
           <div className="flex flex-col max-w-6xl mx-auto text-center">
@@ -218,18 +245,18 @@ export default function Home() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <a 
-                  href="https://www.amazon.com/MeshMight-Flex-6-Pack-Scuff-Pads/dp/B0FP8MB1WF" 
+                  href={amazonlinks.find(l => l.name === 'AmazonUSFlex')?.link ?? '#'} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="mt-10 inline-flex items-center justify-center px-6 py-3 text-base font-bold text-black transition-all duration-200 bg-white rounded-full hover:bg-black hover:text-[#f9c22d] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF9900]"
+                  className="mt-10 inline-flex items-center justify-center px-6 py-3 text-base font-bold text-black transition-all duration-200 bg-white rounded-full hover:bg-[#f9c22d] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF9900]"
                 >
                   Buy on Amazon.com
                 </a>
                 <a 
-                  href="https://www.amazon.ca/Meshmight-Flex-6-Pack-Scuff-Pads/dp/B0FP8MB1WF" 
+                  href={amazonlinks.find(l => l.name === 'AmazonCAFlex')?.link ?? '#'}
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center justify-center px-8 py-3 text-base font-bold text-black transition-all duration-200 bg-white rounded-full hover:bg-black hover:text-[#f9c22d] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF9900]"
+                  className="mt-4 inline-flex items-center justify-center px-8 py-3 text-base font-bold text-black transition-all duration-200 bg-white rounded-full hover:bg-[#f9c22d] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF9900]"
                 >
                   Buy on Amazon.ca
                 </a>
@@ -246,18 +273,18 @@ export default function Home() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <a 
-                  href="https://www.amazon.com/MeshMight-Non-Woven-Aluminum-Abrasive-Scouring/dp/B0DYHWKZQ2" 
+                  href={amazonlinks.find(l => l.name === 'AmazonUSRegular')?.link ?? '#'}
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="mt-10 inline-flex items-center justify-center px-6 py-3 text-base font-bold text-black transition-all duration-200 bg-white rounded-full hover:bg-black hover:text-[#f9c22d] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF9900]"
+                  className="mt-10 inline-flex items-center justify-center px-6 py-3 text-base font-bold text-black transition-all duration-200 bg-white rounded-full hover:bg-[#f9c22d] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF9900]"
                 >
                   Buy on Amazon.com
                 </a>
                 <a 
-                  href="https://www.amazon.ca/12-Pack-Non-Woven-Aluminum-Woodworking-Finishing/dp/B0DYHWKZQ2" 
+                  href={amazonlinks.find(l => l.name === 'AmazonCARegular')?.link ?? '#'}
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center justify-center px-8 py-3 text-base font-bold text-black transition-all duration-200 bg-white rounded-full hover:bg-black hover:text-[#f9c22d] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF9900]"
+                  className="mt-4 inline-flex items-center justify-center px-8 py-3 text-base font-bold text-black transition-all duration-200 bg-white rounded-full hover:bg-[#f9c22d] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF9900]"
                 >
                   Buy on Amazon.ca
                 </a>
@@ -268,13 +295,27 @@ export default function Home() {
             </div>
       </section>
 
-      {/* 4. CONTACT SECTION (id="contact") */}
-      <section id="contact" className="min-h-screen flex flex-col items-center justify-center bg-contact-bg text-contact-text px-6 py-12">
+      <Specs />
+
+      {/* 6. CONTACT SECTION (id="contact") */}
+      <section id="contact" className="min-h-screen flex flex-col items-center justify-center bg-about-bg text-about-text px-6 py-12">
         <div className="container mx-auto max-w-2xl">
-          <h2 className="text-4xl font-bold text-contact-text mb-6 text-center">Ready to start your project?</h2>
+          <h2 className="text-4xl font-bold text-about-text mb-6 text-center">Ready to start your project?</h2>
           <ContactForm />
         </div>
       </section>
+
+      <footer className="bg-about-bg text-about-text px-6 pb-12">
+        <div className="container mx-auto max-w-2xl text-center">
+          <p className="text-sm opacity-80">
+            Buying in bulk? Don't hesitate to reach out at{" "}
+            <a href="mailto:care@meshmight.ca" className="underline underline-offset-4 hover:opacity-100">
+              care@meshmight.ca
+            </a>{" "}
+            for volume pricing.
+          </p>
+        </div>
+      </footer>
 
     </main>
   )

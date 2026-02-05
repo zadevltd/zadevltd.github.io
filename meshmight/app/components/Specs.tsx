@@ -81,11 +81,11 @@ const flexSeries = [
 
 export default function Specs() {
   return (
-    <section id="specs" className="bg-products-bg text-products-text px-6 pt-20 pb-0">
+    <section id="specs" className="bg-products-bg text-products-text px-6 pt-10 pb-0">
       <div className="container mx-auto max-w-7xl">
         
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="text-4xl font-bold mb-4">Technical Specifications</h2>
           <p className="opacity-80 text-lg">
             Engineered specific grades for every stage of the finishing process.
@@ -94,12 +94,12 @@ export default function Specs() {
 
          {/* --- FLEX SERIES --- */}
          <div>
-          <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 border-b border-white/10 pb-4">
+          <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 border-b border-white/20 pb-4">
             <div>
               <h3 className="text-2xl font-bold">Flex Series</h3>
               <p className="opacity-70 mt-1">Thinner, highly conformable pads designed for precision suface conditioning on curves, contours, and tight spaces.</p>
             </div>
-            <div className="flex items-center mt-4 md:mt-0 bg-white/5 px-4 py-2 rounded-full">
+            <div className="flex items-center mt-4 md:mt-0 bg-white/10 px-4 py-2 rounded-full">
               <Maximize className="w-4 h-4 mr-2 opacity-70" />
               <span className="text-sm font-mono">6" x 9" x 0.25"</span>
             </div>
@@ -107,7 +107,7 @@ export default function Specs() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {flexSeries.map((item, index) => (
-              <div key={index} className="bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">
+              <div key={index} className="bg-white/10 border border-white/20 rounded-xl p-6 hover:bg-white/30 transition-colors">
                  <div className="flex justify-between items-start mb-4">
                   <div className={`w-8 h-8 rounded-full shadow-sm ${item.color} border-2 border-white/20`}></div>
                   <span className="font-mono text-sm bg-black/20 px-2 py-1 rounded text-white/90">
@@ -120,7 +120,7 @@ export default function Specs() {
                   {item.mineral}
                 </p>
                 
-                <p className="text-sm leading-relaxed opacity-80 border-t border-white/10 pt-4">
+                <p className="text-sm leading-relaxed opacity-80 border-t border-white/10 pt-4 ">
                   <strong className="block text-gray-600 mb-1">{item.type}</strong>
                   {item.desc}
                 </p>
@@ -130,8 +130,8 @@ export default function Specs() {
         </div>
 
         {/* --- STANDARD SERIES --- */}
-        <div className="mb-20">
-          <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 border-b border-white/10 pb-4">
+        <div className="mb-20 mt-10">
+          <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 border-b border-white/20 pb-4">
             <div>
               <h3 className="text-2xl font-bold">Standard Series</h3>
               <p className="opacity-70 mt-1">Durable non-woven pads designed for larger surfaces and general-purpose scuffing. </p>
@@ -144,7 +144,7 @@ export default function Specs() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {standardSeries.map((item, index) => (
-              <div key={index} className="bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors group">
+              <div key={index} className="bg-white/10 border border-white/20 rounded-xl p-6 hover:bg-white/30 transition-colors group">
                 <div className="flex justify-between items-start mb-4">
                   <div className={`w-8 h-8 rounded-full shadow-sm ${item.color} border-2 border-white/20`}></div>
                   <span className="font-mono text-sm bg-black/20 px-2 py-1 rounded text-white/90">

@@ -266,7 +266,7 @@ export default function Home() {
                   alt="MeshMight Flex scuff pads - flexible abrasive pads with superior conformability for woodworking and automotive finishing" 
                   width={400} 
                   height={400} 
-                  className="rounded-4xl overflow-hidden object-cover"
+                  className="rounded-4xl overflow-hidden object-cover border-8 border-[#f9c22d]/100"
                   loading="lazy"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
@@ -294,7 +294,7 @@ export default function Home() {
                   alt="MeshMight Regular non-woven abrasive pads with silicon carbide for professional woodworking automotive applications" 
                   width={400} 
                   height={400} 
-                  className="rounded-4xl overflow-hidden object-cover"
+                  className="rounded-4xl overflow-hidden object-cover border-8 border-[#f9c22d]/100"
                   loading="lazy"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />

@@ -1,8 +1,34 @@
+import type { Metadata } from "next";
 import Image from 'next/image';
 import { ShieldCheck, Layers, Hammer, MapPin } from 'lucide-react';
 import ContactForm from './components/ContactForm';
 import Specs from './components/Specs';
 import Story from './components/Story';
+
+export const metadata: Metadata = {
+  title: "Premium Abrasive Scuff Pads for Woodworking & Auto Body",
+  description:
+    "MeshMight scuff pads deliver consistent cutting performance for sanding, paint prep, and finishing. Canadian-designed abrasives with silicon carbide and aluminum oxide options.",
+  openGraph: {
+    title: "MeshMight Scuff Pads - Consistent Cut. Every Time.",
+    description:
+      "Premium abrasives with consistent quality and value. Canadian-designed scuff pads engineered for North American workflows.",
+    url: "https://www.meshmight.ca",
+    images: [
+      {
+        url: "/MeshMight_Gear_Logo.png",
+        alt: "MeshMight Logo - Premium Abrasives",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MeshMight Scuff Pads - Consistent Cut. Every Time.",
+    description:
+      "Premium abrasives with consistent quality and value. Canadian-designed scuff pads.",
+    images: ["/MeshMight_Gear_Logo.png"],
+  },
+};
 
 const amazonlinks = [
   {

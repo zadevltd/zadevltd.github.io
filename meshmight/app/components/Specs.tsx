@@ -46,7 +46,7 @@ const standardSeries = [
     name: "MeshMight White",
     grade: "N/A",
     type: "Light Duty Cleaning",
-    mineral: "None (Talc/Resin)",
+    mineral: "None",
     color: "bg-slate-100",
     desc: "Non-abrasive. Will not scratch glass, ceramic, or chrome. Ideal for applying liquid detergents, wax, or polishing compounds.",
   },

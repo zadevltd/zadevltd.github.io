@@ -1,8 +1,4 @@
-# https://www.robotstxt.org/robotstxt.html
-User-agent: *
+User-Agent: *
 Allow: /
 
-# Sitemap
 Sitemap: https://www.meshmight.ca/sitemap.xml
-
-

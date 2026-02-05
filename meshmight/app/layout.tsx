@@ -81,6 +81,14 @@ export default function RootLayout({
     "url": "https://www.meshmight.ca",
     "logo": "https://www.meshmight.ca/MeshMight_Gear_Logo.png",
     "description": "Premium abrasives with consistent quality and value. Canadian-designed scuff pads engineered for North American workflows.",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "care@meshmight.ca",
+        "availableLanguage": ["en"]
+      }
+    ],
     "foundingLocation": {
       "@type": "Country",
       "name": "Canada"
@@ -148,9 +156,24 @@ export default function RootLayout({
     "image": "https://www.meshmight.ca/regular.gif"
   };
 
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "MeshMight - Premium Abrasive Scuff Pads",
+    "url": "https://www.meshmight.ca",
+    "description": "Premium abrasives with consistent quality and value. Canadian-designed scuff pads engineered for North American workflows.",
+    "primaryImageOfPage": "https://www.meshmight.ca/MeshMight_Gear_Logo.png",
+    "publisher": {
+      "@type": "Organization",
+      "name": "MeshMight",
+      "url": "https://www.meshmight.ca"
+    },
+    "mainEntity": [productSchema1, productSchema2]
+  };
+
   return (
     <html lang="en">
-      <body>
+      <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -167,8 +190,14 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema2) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+        />
+      </head>
+      <body>
         <main className="antialiased">
-        <Navbar/>
+          <Navbar />
           {children}
         </main>
       </body>

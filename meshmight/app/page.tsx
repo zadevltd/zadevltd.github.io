@@ -335,8 +335,8 @@ export default function Home() {
         <div className="container mx-auto max-w-2xl text-center">
           <p className="text-sm opacity-80">
             Buying in bulk? Don't hesitate to reach out at{" "}
-            <a href="mailto:care@meshmight.ca" className="underline underline-offset-4 hover:opacity-100">
-              care@meshmight.ca
+            <a href="mailto:sales@meshmight.ca" className="underline underline-offset-4 hover:opacity-100">
+              sales@meshmight.ca
             </a>{" "}
             for volume pricing.
           </p>
